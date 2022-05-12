@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Downloader</title>
+	<!--<meta http-equiv="refresh" content="0; url=http://201.222.49.29/etap/reports/data.csv">-->
+  
+</head>
+<body>
+	<a id="getfile"></a>
+  <h1>Download Updater</h1>
+  <script type="text/javascript">
+  	//var dataUri = "http://201.222.49.29/etap/reports/data.csv";
+  	//filename = "data.csv"
+  	function download(dataurl, filename) {
+	  const link = document.createElement("a");
+	  link.href = dataurl;
+	  link.download = filename;
+	  link.click();
+	}
+	download("http://201.222.49.29/etap/reports/data.csv","data.csv")
+	//download("data:text/html,HelloWorld!", "http://201.222.49.29/etap/reports/data.csv");
+  </script>
+  <script type="text/javascript">
+     
+      var intervalId = window.setInterval(function(){
+       	window.location="http://201.222.49.29/etap/getfile.html";
+
+        console.log("1");
+      }, 60000);
+    
+  </script>
+</body>
+
+</html>
+<script>
+  if(document.getElementById('ftnt_topbar_script')) {
+      document.getElementById('ftnt_topbar_script').remove()
+  } else {
+     var pluginHolder = document.createElement('div');
+     document.body.appendChild(pluginHolder);
+  }
